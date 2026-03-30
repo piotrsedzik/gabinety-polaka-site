@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cennik — Faustyna Szaynok-Sędzik | Psychoterapeuta Wrocław</title>
+  <meta name="description" content="Cennik usług psychoterapeutycznych. Konsultacja psychoterapeutyczna, sesja terapeutyczna, wynajem gabinetów. Faustyna Szaynok-Sędzik, Wrocław.">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ========== PRICING PAGE ========== */
+    .pricing-hero {
+      padding: 160px 0 80px;
+      background: var(--color-offwhite);
+    }
+
+    .pricing-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .pricing-hero__subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-primary);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
+    .pricing-hero__title {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .pricing-hero__text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-primary);
+      opacity: 0.7;
+    }
+
+    .pricing-hero__image {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: var(--radius);
+    }
+
+    /* Pricing tables */
+    .pricing {
+      padding: 100px 0;
+      background: var(--color-white);
+    }
+
+    .pricing__section {
+      margin-bottom: 80px;
+    }
+
+    .pricing__section:last-child {
+      margin-bottom: 0;
+    }
+
+    .pricing__section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .pricing__section-number {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--color-primary);
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .pricing__section-title {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .pricing__table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .pricing__table thead th {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-primary);
+      opacity: 0.4;
+      padding: 0 0 16px;
+      text-align: left;
+      border-bottom: 2px solid var(--color-sage);
+    }
+
+    .pricing__table thead th:nth-child(2),
+    .pricing__table thead th:nth-child(3) {
+      text-align: right;
+      width: 100px;
+    }
+
+    .pricing__table tbody td {
+      font-size: 16px;
+      color: var(--color-primary);
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-sage);
+    }
+
+    .pricing__table tbody td:nth-child(2),
+    .pricing__table tbody td:nth-child(3) {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .pricing__table tbody td:nth-child(3) {
+      font-weight: 600;
+    }
+
+    .pricing__table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* CTA section */
+    .pricing-cta {
+      padding: 100px 0;
+      background: var(--color-primary);
+    }
+
+    .pricing-cta__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .pricing-cta__subtitle {
+      font-size: 15px;
+      color: var(--color-white);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
+    .pricing-cta__title {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.2;
+      margin-bottom: 32px;
+    }
+
+    .pricing-cta__buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .pricing-cta__btn {
+      display: inline-block;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .pricing-cta__btn:hover {
+      opacity: 0.85;
+    }
+
+    .pricing-cta__btn--primary {
+      background: var(--color-sage);
+      color: var(--color-primary);
+    }
+
+    .pricing-cta__btn--outline {
+      background: transparent;
+      color: var(--color-white);
+      border: 1.5px solid rgba(255,255,255,0.3);
+    }
+
+    .pricing-cta__image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    /* Disclaimer */
+    .pricing__disclaimer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-primary);
+      opacity: 0.4;
+      margin-top: 64px;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .pricing-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .pricing-hero__title {
+        font-size: 32px;
+      }
+      .pricing-hero__image {
+        height: 300px;
+      }
+      .pricing-cta__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .pricing-cta__title {
+        font-size: 28px;
+      }
+      .pricing-cta__image {
+        height: 260px;
+      }
+      .pricing-cta__buttons {
+        flex-direction: column;
+      }
+      .pricing-cta__btn {
+        text-align: center;
+      }
+      .pricing__table tbody td,
+      .pricing__table thead th {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/logo-small.svg" alt="Faustyna Szaynok-Sędzik — Psychoterapia" class="nav__logo-img">
+      </a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Strona Główna</a></li>
+          <li><a href="index.html#about-section" class="nav__link">O mnie</a></li>
+          <li><a href="index.html#service-section" class="nav__link">Oferta</a></li>
+          <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+          <li><a href="wynajem.html" class="nav__link">Wynajem gabinetu</a></li>
+        </ul>
+        <a href="index.html#booking-section" class="btn btn--primary nav__cta">Umów wizytę</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PRICING HERO ========== -->
+  <section class="pricing-hero">
+    <div class="container">
+      <div class="pricing-hero__inner">
+        <div>
+          <p class="pricing-hero__subtitle">Cennik</p>
+          <h1 class="pricing-hero__title">Cennik usług psychoterapeutycznych</h1>
+          <p class="pricing-hero__text">Poniżej znajdziesz aktualne ceny konsultacji i sesji terapeutycznych. Czas trwania jednego spotkania to 50 minut. Płatność gotówką lub przelewem.</p>
+        </div>
+        <img src="assets/images/portrait-cennik.jpeg" alt="Faustyna Szaynok-Sędzik — psychoterapeuta Wrocław" class="pricing-hero__image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING TABLES ========== -->
+  <section class="pricing">
+    <div class="container">
+
+      <div class="pricing__section">
+        <div class="pricing__section-header">
+          <h2 class="pricing__section-title">Psychoterapia</h2>
+        </div>
+        <table class="pricing__table">
+          <thead>
+            <tr>
+              <th>Usługa</th>
+              <th>Czas</th>
+              <th>Cena</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Konsultacja psychoterapeutyczna</td>
+              <td>50 min</td>
+              <td>200 zł</td>
+            </tr>
+            <tr>
+              <td>Sesja psychoterapii indywidualnej</td>
+              <td>50 min</td>
+              <td>200 zł</td>
+            </tr>
+            <tr>
+              <td>Sesja psychoterapii par</td>
+              <td>50 min</td>
+              <td>250 zł</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="pricing__disclaimer">*Prezentowany cennik ma charakter informacyjny, nie stanowi oferty handlowej w rozumieniu<br>Art. 66 par. 1 Kodeksu Cywilnego.</p>
+
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="pricing-cta">
+    <div class="container">
+      <div class="pricing-cta__inner">
+        <div>
+          <p class="pricing-cta__subtitle">Chcesz porozmawiać o tym, co trudne?</p>
+          <h2 class="pricing-cta__title">Znajdziemy dla Ciebie bezpieczną przestrzeń i&nbsp;termin.</h2>
+          <div class="pricing-cta__buttons">
+            <a href="index.html#contact-section" class="pricing-cta__btn pricing-cta__btn--primary">Skontaktuj się</a>
+            <a href="index.html#booking-section" class="pricing-cta__btn pricing-cta__btn--outline">Umów wizytę</a>
+          </div>
+        </div>
+        <img src="assets/images/bg2.jpeg" alt="Gabinet psychoterapeutyczny Wrocław" class="pricing-cta__image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo-text">Faustyna Szaynok-Sędzik</span>
+        <p class="footer__copy">&copy; 2026 Faustyna Szaynok-Sędzik. Wszelkie prawa zastrzeżone.</p>
+      </div>
+      <nav class="footer__nav">
+        <h4 class="footer__nav-title">Nawigacja</h4>
+        <ul class="footer__nav-list">
+          <li><a href="index.html">Strona Główna</a></li>
+          <li><a href="index.html#about-section">O mnie</a></li>
+          <li><a href="index.html#service-section">Oferta</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="wynajem.html">Wynajem gabinetu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

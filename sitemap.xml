@@ -2,20 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://faustynaszaynok.pl/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://faustynaszaynok.pl/cennik.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://faustynaszaynok.pl/wynajem.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-02</lastmod>
   </url>
 </urlset>

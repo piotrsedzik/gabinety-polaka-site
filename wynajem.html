@@ -376,11 +376,32 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Strona główna",
+        "item": "https://faustynaszaynok.pl/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Wynajem gabinetów",
+        "item": "https://faustynaszaynok.pl/wynajem.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- ========== NAV ========== -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Nawigacja główna">
     <div class="container nav__inner">
       <a href="/" class="nav__logo">
         <img src="assets/images/logo-small.svg" alt="Faustyna Szaynok-Sędzik — Psychoterapia" class="nav__logo-img">
@@ -556,7 +577,7 @@
         <p class="footer__contact"><a href="mailto:f.szaynok@gmail.com">f.szaynok@gmail.com</a></p>
         <p class="footer__copy">&copy; 2026 Faustyna Szaynok-Sędzik. Wszelkie prawa zastrzeżone.</p>
       </div>
-      <nav class="footer__nav">
+      <nav class="footer__nav" aria-label="Nawigacja stopki">
         <h4 class="footer__nav-title">Nawigacja</h4>
         <ul class="footer__nav-list">
           <li><a href="/">Strona Główna</a></li>

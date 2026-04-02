@@ -9,7 +9,7 @@
   --color-offwhite: #F8FAF2;
   --color-border: rgba(0, 0, 0, 0.12);
 
-  --font-heading: 'Satoshi', 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-logo: 'Playfair Display', Georgia, serif;
 
@@ -382,11 +382,15 @@ h1, h2, h3, h4 {
 }
 
 .about__text-wrapper .about__text:nth-child(n+2) {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0;
 }
 
 .about__text-wrapper.expanded .about__text:nth-child(n+2) {
-  display: block;
+  height: auto;
+  overflow: visible;
+  margin-bottom: 16px;
 }
 
 .about__text-wrapper:not(.expanded)::after {

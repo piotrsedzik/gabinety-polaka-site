@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faustyna Szaynok-Sędzik — Psychoterapeuta Wrocław | Terapia depresji, lęków, zaburzeń osobowości</title>
   <meta name="description" content="Psychoterapeuta i psycholog Wrocław. Terapia indywidualna, par i rodzinna. Psychoterapia psychodynamiczna, TFP, CBT, EMDR. Pomoc przy depresji, zaburzeniach lękowych i osobowości. Umów wizytę.">
-  <meta name="keywords" content="psychoterapeuta Wrocław, psycholog Wrocław, terapia depresji Wrocław, terapia lęku Wrocław, zaburzenia osobowości leczenie, terapia indywidualna, terapia par Wrocław, terapia rodzinna Wrocław, psychoterapia psychodynamiczna, TFP Wrocław, terapia CBT Wrocław, EMDR Wrocław, DBT, psychoterapia online, psycholog dla młodzieży Wrocław, terapia borderline, gabinet psychoterapeutyczny Wrocław, dobry psychoterapeuta Wrocław">
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
   <meta property="og:image" content="https://faustynaszaynok.pl/assets/images/og-image.png">
   <meta property="og:title" content="Faustyna Szaynok-Sędzik — Psychoterapeuta Wrocław | Terapia depresji, lęków, zaburzeń osobowości">
@@ -16,10 +15,11 @@
   <meta name="twitter:title" content="Faustyna Szaynok-Sędzik — Psychoterapeuta Wrocław">
   <meta name="twitter:description" content="Psychoterapeuta Wrocław. Terapia indywidualna dorosłych i nastolatków. Psychoterapia psychodynamiczna, TFP.">
   <meta name="twitter:image" content="https://faustynaszaynok.pl/assets/images/og-image.png">
-  <link rel="canonical" href="https://faustynaszaynok.pl">
+  <link rel="canonical" href="https://faustynaszaynok.pl/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/bg2.jpeg">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Schema.org Structured Data -->
@@ -29,7 +29,7 @@
     "@type": "MedicalBusiness",
     "name": "Faustyna Szaynok-Sędzik — Psychoterapia",
     "description": "Psychoterapeutka w Wrocławiu. Prowadzę psychoterapię indywidualną dorosłych i nastolatków. Nurt psychodynamiczny, TFP.",
-    "url": "https://faustynaszaynok.pl",
+    "url": "https://faustynaszaynok.pl/",
     "telephone": "+48606156650",
     "email": "f.szaynok@gmail.com",
     "image": "https://faustynaszaynok.pl/assets/images/portrait-faustyna.jpeg",
@@ -46,7 +46,6 @@
       "latitude": 51.1079,
       "longitude": 17.0385
     },
-    "medicalSpecialty": "Psychiatric",
     "priceRange": "200 zł",
     "openingHoursSpecification": [
       {
@@ -171,13 +170,55 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Faustyna Szaynok-Sędzik",
+    "jobTitle": "Psychoterapeuta",
+    "url": "https://faustynaszaynok.pl/",
+    "image": "https://faustynaszaynok.pl/assets/images/portrait-faustyna.jpeg",
+    "telephone": "+48606156650",
+    "email": "f.szaynok@gmail.com",
+    "worksFor": {
+      "@type": "MedicalBusiness",
+      "name": "Faustyna Szaynok-Sędzik — Psychoterapia",
+      "url": "https://faustynaszaynok.pl/"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Uniwersytet SWPS we Wrocławiu"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Krakowskie Centrum Psychodynamiczne"
+      }
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Polskie Towarzystwo Psychoterapii Psychodynamicznej"
+    },
+    "knowsAbout": ["psychoterapia psychodynamiczna", "TFP", "zaburzenia osobowości", "depresja", "zaburzenia lękowe"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Faustyna Szaynok-Sędzik — Psychoterapia",
+    "url": "https://faustynaszaynok.pl/"
+  }
+  </script>
 </head>
 <body>
 
   <!-- ========== NAVIGATION ========== -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Nawigacja główna">
     <div class="container nav__inner">
-      <a href="#" class="nav__logo">
+      <a href="/" class="nav__logo">
         <img src="assets/images/logo-small.svg" alt="Faustyna Szaynok-Sędzik — Psychoterapia" class="nav__logo-img">
       </a>
       <button class="nav__hamburger" id="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
@@ -201,7 +242,7 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="hero-section">
     <div class="hero__bg">
-      <img src="assets/images/bg2.jpeg" alt="Gabinet psychoterapeutyczny w Wrocławiu — Faustyna Szaynok-Sędzik" class="hero__bg-img">
+      <img src="assets/images/bg2.jpeg" alt="Gabinet psychoterapeutyczny w Wrocławiu — Faustyna Szaynok-Sędzik" class="hero__bg-img" fetchpriority="high">
     </div>
     <div class="container hero__inner">
       <div class="hero__content">
@@ -492,7 +533,7 @@
         <p class="footer__contact"><a href="mailto:f.szaynok@gmail.com">f.szaynok@gmail.com</a></p>
         <p class="footer__copy">&copy; 2026 Faustyna Szaynok-Sędzik. Wszelkie prawa zastrzeżone.</p>
       </div>
-      <nav class="footer__nav">
+      <nav class="footer__nav" aria-label="Nawigacja stopki">
         <h4 class="footer__nav-title">Nawigacja</h4>
         <ul class="footer__nav-list">
           <li><a href="#hero-section">Strona Główna</a></li>

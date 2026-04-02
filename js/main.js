@@ -34,6 +34,20 @@ if (navCta) {
 }
 
 /* ========================================
+   About — Read More Toggle
+   ======================================== */
+const aboutWrapper = document.getElementById('about-text-wrapper');
+const aboutBtn = document.getElementById('about-read-more');
+
+if (aboutWrapper && aboutBtn) {
+  aboutBtn.addEventListener('click', () => {
+    const expanded = aboutWrapper.classList.toggle('expanded');
+    aboutBtn.querySelector('svg');
+    aboutBtn.firstChild.textContent = expanded ? 'Zwiń ' : 'Czytaj więcej ';
+  });
+}
+
+/* ========================================
    FAQ Accordion
    ======================================== */
 const faqItems = document.querySelectorAll('.faq__item');
@@ -62,8 +76,14 @@ faqItems.forEach(item => {
    ======================================== */
 (function() {
   const MONTHS_PL = ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
-  const SLOTS = ['9:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'];
-  const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/piotreksedzik@gmail.com';
+  // dayOfWeek: 1=Mon, 2=Tue, 4=Thu
+  const SLOTS_BY_DAY = {
+    1: ['8:00','9:00','10:00','11:00','12:00','13:00'],
+    2: ['12:00','13:00'],
+    4: ['11:00','12:00','13:00','14:00']
+  };
+  const AVAILABLE_DAYS = [1, 2, 4]; // Mon, Tue, Thu
+  const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/f.szaynok@gmail.com';
 
   const today = new Date();
   today.setHours(0,0,0,0);
@@ -122,7 +142,7 @@ faqItems.forEach(item => {
 
       const date = new Date(currentYear, currentMonth, day);
       const dayOfWeek = date.getDay();
-      const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
+      const isAvailableDay = AVAILABLE_DAYS.includes(dayOfWeek);
       const isPast = date <= today;
       const isBeyondMax = date > getMaxDate();
       const isToday = date.getTime() === today.getTime();
@@ -130,7 +150,7 @@ faqItems.forEach(item => {
       if (isToday) {
         btn.classList.add('calendar__day--today', 'calendar__day--disabled');
         btn.disabled = true;
-      } else if (isPast || isWeekend || isBeyondMax) {
+      } else if (isPast || !isAvailableDay || isBeyondMax) {
         btn.classList.add('calendar__day--disabled');
         btn.disabled = true;
       } else {
@@ -156,7 +176,9 @@ faqItems.forEach(item => {
     timeslotsLabel.textContent = 'Dostępne godziny — ' + dayName;
     timeslotsGrid.innerHTML = '';
 
-    SLOTS.forEach(slot => {
+    const dayOfWeek = date.getDay();
+    const slots = SLOTS_BY_DAY[dayOfWeek] || [];
+    slots.forEach(slot => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'timeslot';
@@ -220,10 +242,10 @@ faqItems.forEach(item => {
     if (!selectedDate || !selectedSlot) return;
 
     const name = document.getElementById('booking-name').value.trim();
-    const email = document.getElementById('booking-email').value.trim();
+    const phone = document.getElementById('booking-phone').value.trim();
     const note = document.getElementById('booking-note').value.trim();
 
-    if (!name || !email) {
+    if (!name || !phone) {
       showStatus('error', 'Proszę wypełnić wymagane pola.');
       return;
     }
@@ -238,11 +260,12 @@ faqItems.forEach(item => {
 
     const formData = new FormData();
     formData.append('Imię i nazwisko', name);
-    formData.append('Email pacjenta', email);
+    formData.append('Telefon', phone);
     formData.append('Data wizyty', dateFormatted);
     formData.append('Godzina', selectedSlot);
     formData.append('Notatka', note || '(brak)');
     formData.append('_subject', 'Nowa rezerwacja wizyty — ' + name + ' — ' + dateFormatted + ' ' + selectedSlot);
+    formData.append('_cc', 'piotreksedzik@gmail.com');
 
     fetch(FORMSUBMIT_URL, {
       method: 'POST',
@@ -252,7 +275,7 @@ faqItems.forEach(item => {
     .then(res => res.json())
     .then(data => {
       if (data.success) {
-        showStatus('success', 'Rezerwacja wysłana! Potwierdzenie otrzymasz na adres ' + email + '.');
+        showStatus('success', 'Rezerwacja wysłana! Skontaktuję się z Tobą SMS-owo.');
         bookingForm.reset();
         selectedDate = null;
         selectedSlot = null;
@@ -276,4 +299,28 @@ faqItems.forEach(item => {
 
   renderCalendar();
 })();
+
+/* ========================================
+   Clean Anchor Scroll (no hash in URL)
+   ======================================== */
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Scroll to hash section on page load (e.g. coming from /#contact-section)
+if (window.location.hash) {
+  var hashTarget = document.querySelector(window.location.hash);
+  if (hashTarget) {
+    setTimeout(function() {
+      hashTarget.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+    history.replaceState(null, '', window.location.pathname);
+  }
+}
 

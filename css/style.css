@@ -381,11 +381,11 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-.about__text-wrapper .about__text:nth-child(n+4) {
+.about__text-wrapper .about__text:nth-child(n+2) {
   display: none;
 }
 
-.about__text-wrapper.expanded .about__text:nth-child(n+4) {
+.about__text-wrapper.expanded .about__text:nth-child(n+2) {
   display: block;
 }
 
@@ -1148,6 +1148,24 @@ h1, h2, h3, h4 {
   color: var(--color-white);
   display: block;
   margin-bottom: 16px;
+}
+
+.footer__contact {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.footer__contact a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer__contact a:hover {
+  opacity: 0.6;
 }
 
 .footer__copy {

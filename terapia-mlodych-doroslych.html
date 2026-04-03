@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terapia młodych dorosłych Wrocław — Faustyna Szaynok-Sędzik | Plac Grunwaldzki</title>
+  <meta name="description" content="Psychoterapia młodych dorosłych i studentów we Wrocławiu. Pomoc przy lęku, wypaleniu, trudnościach w relacjach, presji kariery. Psychoterapia psychodynamiczna i TFP. Gabinet przy Placu Grunwaldzkim.">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="canonical" href="https://faustynaszaynok.pl/terapia-mlodych-doroslych.html">
+  <meta property="og:title" content="Terapia młodych dorosłych Wrocław — Faustyna Szaynok-Sędzik | Plac Grunwaldzki">
+  <meta property="og:description" content="Psychoterapia młodych dorosłych i studentów we Wrocławiu. Pomoc przy lęku, wypaleniu, trudnościach w relacjach. Gabinet przy Placu Grunwaldzkim.">
+  <meta property="og:image" content="https://faustynaszaynok.pl/assets/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faustynaszaynok.pl/terapia-mlodych-doroslych.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terapia młodych dorosłych Wrocław — Faustyna Szaynok-Sędzik">
+  <meta name="twitter:description" content="Psychoterapia młodych dorosłych i studentów we Wrocławiu. Gabinet przy Placu Grunwaldzkim.">
+  <meta name="twitter:image" content="https://faustynaszaynok.pl/assets/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ========== SUBPAGE LAYOUT ========== */
+    .subpage-hero {
+      padding: 160px 0 80px;
+      background: var(--color-offwhite);
+    }
+
+    .subpage-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .subpage-hero__subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-primary);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
+    .subpage-hero__title {
+      font-family: var(--font-heading);
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .subpage-hero__text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-primary);
+      opacity: 0.7;
+    }
+
+    .subpage-hero__image {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: var(--radius);
+    }
+
+    /* Content section */
+    .subpage-content {
+      padding: 80px 0;
+      background: var(--color-white);
+    }
+
+    .subpage-content__inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .subpage-content h2 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      margin-top: 48px;
+    }
+
+    .subpage-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .subpage-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(28, 39, 6, 0.75);
+      margin-bottom: 16px;
+    }
+
+    .subpage-content ul {
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
+
+    .subpage-content ul li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(28, 39, 6, 0.75);
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+
+    .subpage-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      opacity: 0.25;
+    }
+
+    .subpage-content strong {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* Location badge */
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: var(--color-sage);
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin: 24px 0;
+    }
+
+    .location-badge svg {
+      flex-shrink: 0;
+    }
+
+    /* CTA section */
+    .subpage-cta {
+      padding: 100px 0;
+      background: var(--color-primary);
+    }
+
+    .subpage-cta__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .subpage-cta__subtitle {
+      font-size: 15px;
+      color: var(--color-white);
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+
+    .subpage-cta__title {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.2;
+      margin-bottom: 32px;
+    }
+
+    .subpage-cta__buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .subpage-cta__btn {
+      display: inline-block;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .subpage-cta__btn:hover {
+      opacity: 0.85;
+    }
+
+    .subpage-cta__btn--primary {
+      background: var(--color-sage);
+      color: var(--color-primary);
+    }
+
+    .subpage-cta__btn--outline {
+      background: transparent;
+      color: var(--color-white);
+      border: 1.5px solid rgba(255,255,255,0.3);
+    }
+
+    .subpage-cta__image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .subpage-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .subpage-hero__title {
+        font-size: 30px;
+      }
+      .subpage-hero__image {
+        height: 300px;
+      }
+      .subpage-cta__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .subpage-cta__title {
+        font-size: 28px;
+      }
+      .subpage-cta__image {
+        height: 260px;
+      }
+      .subpage-cta__buttons {
+        flex-direction: column;
+      }
+      .subpage-cta__btn {
+        text-align: center;
+      }
+      .subpage-content h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Strona główna",
+        "item": "https://faustynaszaynok.pl/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terapia młodych dorosłych",
+        "item": "https://faustynaszaynok.pl/terapia-mlodych-doroslych.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Faustyna Szaynok-Sędzik — Psychoterapia młodych dorosłych",
+    "description": "Psychoterapia młodych dorosłych i studentów we Wrocławiu. Psychoterapia psychodynamiczna, TFP. Gabinet przy Placu Grunwaldzkim.",
+    "url": "https://faustynaszaynok.pl/terapia-mlodych-doroslych.html",
+    "telephone": "+48606156650",
+    "email": "f.szaynok@gmail.com",
+    "image": "https://faustynaszaynok.pl/assets/images/portrait-faustyna.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Benedykta Polaka 21/8",
+      "addressLocality": "Wrocław",
+      "addressRegion": "Dolnośląskie",
+      "postalCode": "51-648",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.1079,
+      "longitude": 17.0385
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Wrocław"
+    },
+    "priceRange": "200 zł",
+    "medicalSpecialty": "Psychiatric"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Czym jest psychoterapia młodych dorosłych?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Psychoterapia młodych dorosłych to terapia skierowana do osób w wieku 18-30 lat, które zmagają się z wyzwaniami wchodzenia w dorosłość. Obejmuje pracę nad tożsamością, relacjami, lękiem, depresją i trudnościami zawodowymi. Prowadzę ją w nurcie psychodynamicznym i TFP."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ile kosztuje sesja psychoterapii dla młodego dorosłego?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sesja psychoterapii kosztuje 200 zł i trwa 50 minut. Dotyczy to zarówno konsultacji diagnostycznych, jak i regularnych sesji terapeutycznych. Płatność przelewem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak długo trwa psychoterapia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Czas trwania terapii zależy od problemu i celów. Terapia krótkoterminowa trwa od kilku do kilkunastu spotkań. Psychoterapia psychodynamiczna i TFP to procesy dłuższe, od kilku miesięcy do kilku lat. Częstotliwość sesji ustalamy indywidualnie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy prowadzisz terapię online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie prowadzę terapii online. Wszystkie sesje odbywają się stacjonarnie w gabinecie we Wrocławiu przy ul. Benedykta Polaka 21/8, obok Placu Grunwaldzkiego. W psychoterapii psychodynamicznej cenię bezpośredni kontakt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kiedy warto zgłosić się na terapię jako młody dorosły?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Warto szukać pomocy, gdy odczuwasz przewlekły lęk lub smutek, masz trudności w relacjach, nie radzisz sobie z presją studiów lub pracy, czujesz się zagubiony w życiu, doświadczasz wypalenia lub masz poczucie, że nie żyjesz swoim życiem. Im wcześniej szukasz pomocy, tym lepiej."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav" aria-label="Nawigacja główna">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="assets/images/logo-small.svg" alt="Faustyna Szaynok-Sędzik — Psychoterapia" class="nav__logo-img">
+      </a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Strona Główna</a></li>
+          <li><a href="/#about-section" class="nav__link">O mnie</a></li>
+          <li><a href="/#service-section" class="nav__link">Oferta</a></li>
+          <li><a href="cennik.html" class="nav__link">Cennik</a></li>
+          <li><a href="wynajem.html" class="nav__link">Wynajem gabinetu</a></li>
+        </ul>
+        <a href="/#booking-section" class="btn btn--primary nav__cta">Umów wizytę</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="subpage-hero__inner">
+        <div>
+          <p class="subpage-hero__subtitle">Terapia młodych dorosłych</p>
+          <h1 class="subpage-hero__title">Psychoterapia młodych dorosłych — Wrocław, Plac Grunwaldzki</h1>
+          <p class="subpage-hero__text">Prowadzę psychoterapię osób w wieku 18-30 lat, które zmagają się z wyzwaniami wchodzenia w dorosłość. Pomagam w lęku, depresji, trudnościach w relacjach, presji kariery i poczuciu zagubienia. Gabinet przy ul. Benedykta Polaka 21/8, obok Placu Grunwaldzkiego.</p>
+        </div>
+        <img src="assets/images/portrait-faustyna.jpeg" alt="Faustyna Szaynok-Sędzik — psychoterapeuta dla młodych dorosłych Wrocław" class="subpage-hero__image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTENT ========== -->
+  <section class="subpage-content">
+    <div class="container">
+      <div class="subpage-content__inner">
+
+        <h2>Dla kogo jest terapia młodych dorosłych?</h2>
+        <p>Okres między 18 a 30 rokiem życia to czas intensywnych zmian: studia, pierwsze poważne relacje, wejście na rynek pracy, separacja od rodziny pochodzenia. Te przejścia mogą wywoływać lęk, poczucie zagubienia i trudności, z którymi trudno poradzić sobie samemu.</p>
+        <p>Psychoterapia młodych dorosłych skierowana jest do studentów i osób wchodzących w dorosłość, które doświadczają:</p>
+        <ul>
+          <li>Lęku, ataków paniki, fobii społecznej</li>
+          <li>Depresji, obniżonego nastroju, braku motywacji</li>
+          <li>Trudności w relacjach romantycznych i przyjacielskich</li>
+          <li>Presji kariery, wypalenia, niezdecydowania zawodowego</li>
+          <li>Problemów z tożsamością i poczuciem własnej wartości</li>
+          <li>Trudności w separacji od rodziny pochodzenia</li>
+          <li>Zaburzeń osobowości</li>
+          <li>Przewlekłego stresu i zaburzeń psychosomatycznych</li>
+        </ul>
+
+        <h2>Typowe problemy młodych dorosłych</h2>
+        <p><strong>Presja kariery i studiów.</strong> Poczucie, że trzeba mieć wszystko poukładane. Lęk przed porażką, porównywanie się z rówieśnikami, syndrom oszusta. Trudność w podejmowaniu decyzji o kierunku życia.</p>
+        <p><strong>Relacje i bliskość.</strong> Trudności w budowaniu trwałych relacji, lęk przed bliskością lub odrzuceniem, powtarzające się wzorce w związkach, konflikty z partnerem.</p>
+        <p><strong>Separacja od rodziny.</strong> Wchodzenie w dorosłość wymaga przebudowania relacji z rodzicami. Poczucie winy, lojalność wobec rodziny, trudność w stawianiu granic.</p>
+        <p><strong>Tożsamość i sens.</strong> Pytania "kim jestem?" i "czego chcę?" mogą być przytłaczające. Poczucie pustki, brak kierunku, wrażenie, że żyje się nie swoim życiem.</p>
+
+        <h2>Jak pracuję z młodymi dorosłymi?</h2>
+        <p>Prowadzę psychoterapię w nurcie psychodynamicznym. Oznacza to, że wspólnie przyglądamy się nie tylko objawom, ale też ich źródłom. Pracujemy nad wzorcami z przeszłości, które wpływają na obecne trudności.</p>
+        <p>Specjalizuję się w <strong>Terapii Skoncentrowanej na Przeniesieniu (TFP)</strong> — metodzie opartej o teorię Otto Kernberga. TFP jest szczególnie skuteczna w pracy z zaburzeniami osobowości i trudnościami w relacjach.</p>
+        <p>Proces terapii składa się z kilku etapów:</p>
+        <ul>
+          <li><strong>Konsultacja diagnostyczna</strong> (3-5 spotkań) — poznanie Twojej sytuacji, postawienie diagnozy, ustalenie planu pracy</li>
+          <li><strong>Regularne sesje</strong> — spotkania raz lub dwa razy w tygodniu, po 50 minut</li>
+          <li><strong>Praca nad zmianą</strong> — stopniowe przepracowanie trudności, budowanie nowych wzorców w relacjach i w życiu</li>
+        </ul>
+
+        <h2>Kiedy warto szukać pomocy?</h2>
+        <p>Warto zgłosić się do psychoterapeuty, gdy:</p>
+        <ul>
+          <li>Odczuwasz przewlekły lęk, smutek lub brak energii</li>
+          <li>Masz trudności w relacjach, które się powtarzają</li>
+          <li>Czujesz się zagubiony i nie wiesz, czego chcesz od życia</li>
+          <li>Doświadczasz wypalenia na studiach lub w pracy</li>
+          <li>Masz poczucie, że nie żyjesz swoim życiem</li>
+          <li>Zmagasz się z niską samooceną lub perfekcjonizmem</li>
+          <li>Przeżywasz kryzys po rozstaniu, stracie lub zmianie życiowej</li>
+        </ul>
+        <p>Im wcześniej szukasz pomocy, tym szybciej możesz poczuć się lepiej i zacząć budować życie, które ma sens.</p>
+
+        <div class="location-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Benedykta Polaka 21/8, Wrocław — obok Placu Grunwaldzkiego
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq" id="faq-section">
+    <div class="container">
+      <h2 class="section-title">Najczęściej zadawane pytania o terapię młodych dorosłych</h2>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Czym jest psychoterapia młodych dorosłych?</span>
+            <svg class="faq__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Psychoterapia młodych dorosłych to terapia skierowana do osób w wieku 18-30 lat, które zmagają się z wyzwaniami wchodzenia w dorosłość. Obejmuje pracę nad tożsamością, relacjami, lękiem, depresją i trudnościami zawodowymi. Prowadzę ją w nurcie psychodynamicznym i TFP.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Ile kosztuje sesja psychoterapii dla młodego dorosłego?</span>
+            <svg class="faq__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Sesja psychoterapii kosztuje 200 zł i trwa 50 minut. Dotyczy to zarówno konsultacji diagnostycznych, jak i regularnych sesji terapeutycznych. Płatność przelewem. <a href="cennik.html" style="text-decoration: underline;">Zobacz pełny cennik</a>.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Jak długo trwa psychoterapia?</span>
+            <svg class="faq__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Czas trwania terapii zależy od problemu i celów. Terapia krótkoterminowa trwa od kilku do kilkunastu spotkań. Psychoterapia psychodynamiczna i TFP to procesy dłuższe, od kilku miesięcy do kilku lat. Częstotliwość sesji ustalamy indywidualnie.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Czy prowadzisz terapię online?</span>
+            <svg class="faq__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Nie prowadzę terapii online. Wszystkie sesje odbywają się stacjonarnie w gabinecie we Wrocławiu przy ul. Benedykta Polaka 21/8, obok Placu Grunwaldzkiego. W psychoterapii psychodynamicznej cenię bezpośredni kontakt, który pozwala na pracę z komunikacją niewerbalną.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Kiedy warto zgłosić się na terapię jako młody dorosły?</span>
+            <svg class="faq__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__answer">
+            <p>Warto szukać pomocy, gdy odczuwasz przewlekły lęk lub smutek, masz trudności w relacjach, nie radzisz sobie z presją studiów lub pracy, czujesz się zagubiony w życiu, doświadczasz wypalenia lub masz poczucie, że nie żyjesz swoim życiem. Im wcześniej szukasz pomocy, tym lepiej.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="subpage-cta">
+    <div class="container">
+      <div class="subpage-cta__inner">
+        <div>
+          <p class="subpage-cta__subtitle">Pierwszy krok to rozmowa</p>
+          <h2 class="subpage-cta__title">Umów konsultację — wspólnie znajdziemy najlepszą formę pomocy dla&nbsp;Ciebie.</h2>
+          <div class="subpage-cta__buttons">
+            <a href="/#booking-section" class="subpage-cta__btn subpage-cta__btn--primary">Umów wizytę</a>
+            <a href="tel:+48606156650" class="subpage-cta__btn subpage-cta__btn--outline">Zadzwoń: 606 156 650</a>
+          </div>
+        </div>
+        <img src="assets/images/bg2.jpeg" alt="Gabinet psychoterapii młodych dorosłych Wrocław — ul. Benedykta Polaka, obok Placu Grunwaldzkiego" class="subpage-cta__image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo-text">Faustyna Szaynok-Sędzik</span>
+        <p class="footer__contact"><a href="tel:+48606156650">+48 606 156 650</a></p>
+        <p class="footer__contact"><a href="mailto:f.szaynok@gmail.com">f.szaynok@gmail.com</a></p>
+        <p class="footer__copy">&copy; 2026 Faustyna Szaynok-Sędzik. Wszelkie prawa zastrzeżone.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Nawigacja stopki">
+        <h4 class="footer__nav-title">Nawigacja</h4>
+        <ul class="footer__nav-list">
+          <li><a href="/">Strona Główna</a></li>
+          <li><a href="/#about-section">O mnie</a></li>
+          <li><a href="/#service-section">Oferta</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="wynajem.html">Wynajem gabinetu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

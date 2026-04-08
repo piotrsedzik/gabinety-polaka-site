@@ -16,6 +16,16 @@
   <meta name="twitter:title" content="Wynajem gabinetów — Faustyna Szaynok-Sędzik | Wrocław">
   <meta name="twitter:description" content="Wynajem gabinetów psychoterapeutycznych we Wrocławiu. Klimatyzowane, z zapleczem socjalnym.">
   <meta name="twitter:image" content="https://faustynaszaynok.pl/assets/images/og-image.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5MGV5JTM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GT-5MGV5JTM');
+    gtag('config', 'AW-18073208716');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -647,6 +657,27 @@
         if (e.key === 'ArrowLeft') prev();
       });
     })();
+  </script>
+
+  <!-- Conversion tracking: phone click + email click -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+      var href = link.getAttribute('href') || '';
+      if (href.startsWith('tel:')) {
+        gtag('event', 'conversion', {
+          send_to: 'AW-18073208716/phone_click',
+          event_callback: function() {}
+        });
+      }
+      if (href.startsWith('mailto:')) {
+        gtag('event', 'conversion', {
+          send_to: 'AW-18073208716/email_click',
+          event_callback: function() {}
+        });
+      }
+    });
   </script>
 </body>
 </html>
